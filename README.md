@@ -9,10 +9,13 @@ Welcome to the GitHub repository for workshop on community ecology analyses usin
 * New Orleans Ernest N. Morial Convention Center - 340-341
 
 ## Organizers
+
 [Naupaka Zimmerman](http://naupaka.net) and [Gavin Simpson](http://www.fromthebottomoftheheap.net).
 
 ## Instructor
+
 [Naupaka Zimmerman](http://naupaka.net)
+
 ---
 
 The R statistical language has enjoyed wide and rapid adoption by many ecologists, and is used across many ecological subdisciplines for statistical analyses and the production of publication-quality figures. For community ecologists using R, one of the most-used, and most-useful, add-on packages is vegan, which provides a wide range of functionality covering *inter alia* ordination, diversity analysis, and ecological simulation. This workshop will offer participants a practical introduction to some of the most useful functions available within vegan. We will focus in particular on the use of NMDS as an ordination method and on how to visualize the results using related plotting tools. We will also cover between-group tests such as PERMANOVA.
