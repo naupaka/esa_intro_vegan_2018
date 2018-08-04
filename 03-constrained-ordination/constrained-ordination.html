@@ -93,13 +93,13 @@
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
       <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
       <p data-config-presenter><!-- populated from slide_config.json --></p>
-            <p style="margin-top: 6px; margin-left: -2px;">August 6, 2017 • ESA 2017</p>
+            <p style="margin-top: 6px; margin-left: -2px;">August 5, 2018 • ESA 2018</p>
           </hgroup>
   </slide>
 
-<slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Constrained Ordination</h2></hgroup><article  id="constrained-ordination" class="smaller ">
+<slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Constrained Ordination</h2></hgroup><article  id="constrained-ordination" class="smaller ">
 
-</article></slide><slide class=''><hgroup><h2>Canonical Correspondence Analysis</h2></hgroup><article  id="canonical-correspondence-analysis" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Canonical Correspondence Analysis</h2></hgroup><article  id="canonical-correspondence-analysis" class="smaller ">
 
 <p>CCA is the constrained form of CA; fitted using <code>cca()</code>.</p>
 
@@ -110,9 +110,9 @@
 <li>formula; <code>cca1 &lt;- cca(varespec ~ ., data = varechem)</code></li>
 </ul>
 
-<p>Formula interface is the more powerful &#8212; <em>recommended</em></p>
+<p>Formula interface is the more powerful — <em>recommended</em></p>
 
-</article></slide><slide class=''><hgroup><h2>Canonical Correspondence Analysis</h2></hgroup><article  id="canonical-correspondence-analysis-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Canonical Correspondence Analysis</h2></hgroup><article  id="canonical-correspondence-analysis-1" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>cca1 &lt;- cca(varespec ~ ., data = varechem)
 cca1</pre>
@@ -136,7 +136,7 @@ Eigenvalues for unconstrained axes:
     CA1     CA2     CA3     CA4     CA5     CA6     CA7     CA8     CA9 
 0.19776 0.14193 0.10117 0.07079 0.05330 0.03330 0.01887 0.01510 0.00949 </pre>
 
-</article></slide><slide class=''><hgroup><h2>Redundancy Analysis</h2></hgroup><article  id="redundancy-analysis" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Redundancy Analysis</h2></hgroup><article  id="redundancy-analysis" class="smaller ">
 
 <p>RDA is the constrained form of PCA; fitted using <code>rda()</code>.</p>
 
@@ -162,7 +162,7 @@ Eigenvalues for unconstrained axes:
    PC1    PC2    PC3    PC4    PC5    PC6    PC7    PC8    PC9 
 186.19  88.46  38.19  18.40  12.84  10.55   5.52   4.52   1.09 </pre>
 
-</article></slide><slide class=''><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object" class="smaller ">
 
 <ul>
 <li>Objects of class <code>&quot;cca&quot;</code> are complex with many components</li>
@@ -171,7 +171,7 @@ Eigenvalues for unconstrained axes:
 <li>Used for (C)CA, PCA, RDA, and CAP (<code>capscale()</code>)</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object-1" class="smaller ">
 
 <p><code>cca1</code> has a large number of components</p>
 
@@ -188,7 +188,7 @@ Eigenvalues for unconstrained axes:
 <li><strong><code>$inertia</code></strong> Description of what inertia is</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>The <code>cca.object</code></h2></hgroup><article  id="the-cca.object-2" class="smaller ">
 
 <p>Depending on how one called <code>cca()</code> etc some of these components will be <code>NULL</code></p>
 
@@ -200,7 +200,7 @@ Eigenvalues for unconstrained axes:
 
 <p>Thankfully we can use <em>extractor</em> functions to get at such things</p>
 
-</article></slide><slide class=''><hgroup><h2>Eigenvalues</h2></hgroup><article  id="eigenvalues" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Eigenvalues</h2></hgroup><article  id="eigenvalues" class="smaller ">
 
 <p>Use <code>eigenvals()</code> to extract Eigenvalues from a fitted ordination object</p>
 
@@ -215,14 +215,14 @@ Eigenvalues for unconstrained axes:
       CA8       CA9 
 0.0151044 0.0094876 </pre>
 
-</article></slide><slide class=''><hgroup><h2>Extracting axis scores</h2></hgroup><article  id="extracting-axis-scores" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Extracting axis scores</h2></hgroup><article  id="extracting-axis-scores" class="smaller ">
 
 <p>To extract a range of scores from a fitted ordination use <code>scores()</code></p>
 
 <ul>
 <li>takes an ordination object as the first argument</li>
-<li><code>choices</code> &#8212; which axes? Defaults to <code>c(1,2)</code></li>
-<li><code>display</code> &#8212; which type(s) of scores to return
+<li><code>choices</code> — which axes? Defaults to <code>c(1,2)</code></li>
+<li><code>display</code> — which type(s) of scores to return
 
 <ul>
 <li><code>&quot;sites&quot;</code> or <code>&quot;wa&quot;</code>: scores for samples in response matrix</li>
@@ -233,7 +233,7 @@ Eigenvalues for unconstrained axes:
 </ul></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Extracting axis scores</h2></hgroup><article  id="extracting-axis-scores-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Extracting axis scores</h2></hgroup><article  id="extracting-axis-scores-1" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>str(scores(cca1, choices = 1:4, display = c(&quot;species&quot;,&quot;sites&quot;)), max = 1)</pre>
 
@@ -253,30 +253,30 @@ Eigenvalues for unconstrained axes:
 23 -0.5980933 -0.1840362
 19 -0.1102881  0.7143142</pre>
 
-</article></slide><slide class=''><hgroup><h2>Scalings&#8230;</h2></hgroup><article  id="scalings..." class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Scalings…</h2></hgroup><article  id="scalings" class="smaller ">
 
 <p>When we draw the results of many ordinations we display 2 or more sets of data</p>
 
-<p>Can&#39;t display all of these and maintain relationships between the scores</p>
+<p>Can’t display all of these and maintain relationships between the scores</p>
 
 <p><em>Solution</em> scale one set of scores relative to the other</p>
 
 <p>Controlled via the <code>scaling</code> argument</p>
 
 <ul>
-<li><code>scaling = 1</code> &#8212; Focus on sites, scale site scores by \(\lambda_i\)</li>
-<li><code>scaling = 2</code> &#8212; Focus on species, scale species scores by \(\lambda_i\)</li>
-<li><code>scaling = 3</code> &#8212; Symmetric scaling, scale both scores by \(\sqrt{\lambda_i}\)</li>
-<li><code>scaling = -1</code> &#8212; As above, but</li>
-<li><code>scaling = -2</code> &#8212; For <code>cca()</code> multiply results by \(\sqrt{(1/(1-\lambda_i))}\)</li>
-<li><code>scaling = -3</code> &#8212; this is Hill&#39;s scaling</li>
-<li><code>scaling &lt; 0</code> &#8212; For <code>rda()</code> divide species scores by species&#39; \(\sigma\)</li>
-<li><code>scaling = 0</code> &#8212; raw scores</li>
+<li><code>scaling = 1</code> — Focus on sites, scale site scores by \(\lambda_i\)</li>
+<li><code>scaling = 2</code> — Focus on species, scale species scores by \(\lambda_i\)</li>
+<li><code>scaling = 3</code> — Symmetric scaling, scale both scores by \(\sqrt{\lambda_i}\)</li>
+<li><code>scaling = -1</code> — As above, but</li>
+<li><code>scaling = -2</code> — For <code>cca()</code> multiply results by \(\sqrt{(1/(1-\lambda_i))}\)</li>
+<li><code>scaling = -3</code> — this is Hill’s scaling</li>
+<li><code>scaling &lt; 0</code> — For <code>rda()</code> divide species scores by species’ \(\sigma\)</li>
+<li><code>scaling = 0</code> — raw scores</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>scores(cca1, choices = 1:2, display = &quot;species&quot;, scaling = 3)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Partial constrained ordinations</h2></hgroup><article  id="partial-constrained-ordinations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Partial constrained ordinations</h2></hgroup><article  id="partial-constrained-ordinations" class="smaller ">
 
 <p><em>Partial</em> constrained ordinations remove the effect of one or more variables <em>then</em> fit model of interest</p>
 
@@ -289,33 +289,33 @@ Eigenvalues for unconstrained axes:
             Z = varechem[, &quot;pH&quot;, drop = FALSE])
 pcca &lt;- cca(varespec ~ Ca + Condition(pH), data = varechem) ## easier!</pre>
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Plotting constrained ordinations</h2></hgroup><article  id="plotting-constrained-ordinations" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Plotting constrained ordinations</h2></hgroup><article  id="plotting-constrained-ordinations" class="smaller ">
 
-</article></slide><slide class=''><hgroup><h2>Triplots</h2></hgroup><article  id="triplots" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Triplots</h2></hgroup><article  id="triplots" class="smaller ">
 
 <p>Triplots will generally produce a mess; we can really only display a couple of bits approximately anyway</p>
 
-<p>Trying to cram three things in is a recipe for a mess&#8230;</p>
+<p>Trying to cram three things in is a recipe for a mess…</p>
 
-<p>&#8230;but we can do it</p>
-
-<pre class = 'prettyprint lang-r'>plot(cca1)</pre>
-
-</article></slide><slide class=''><hgroup><h2>Triplots</h2></hgroup><article  id="triplots-1" class="smaller ">
+<p>…but we can do it</p>
 
 <pre class = 'prettyprint lang-r'>plot(cca1)</pre>
 
-<img src='constrained-ordination_files/figure-html/triplot-2-1.png' title='fig:'/>
+</article></slide><slide class=""><hgroup><h2>Triplots</h2></hgroup><article  id="triplots-1" class="smaller ">
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Model building</h2></hgroup><article  id="model-building" class="smaller ">
+<pre class = 'prettyprint lang-r'>plot(cca1)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models" class="smaller ">
+<img src='constrained-ordination_files/figure-html/triplot-2-1.png' title=''/>
 
-<p>If we don&#39;t want to think it&#39;s easy to fit a poor model with many constraints</p>
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Model building</h2></hgroup><article  id="model-building" class="smaller ">
 
-<p>That&#39;s what we just did with <code>cca1</code> and <code>rda1</code></p>
+</article></slide><slide class=""><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models" class="smaller ">
 
-<p>Remember, CCA and RDA are <em>just regression methods</em> &#8212; everything you know about regression applies here</p>
+<p>If we don’t want to think it’s easy to fit a poor model with many constraints</p>
+
+<p>That’s what we just did with <code>cca1</code> and <code>rda1</code></p>
+
+<p>Remember, CCA and RDA are <em>just regression methods</em> — everything you know about regression applies here</p>
 
 <p>A better approach is to <em>think</em> about the important variables and include only those</p>
 
@@ -323,7 +323,7 @@ pcca &lt;- cca(varespec ~ Ca + Condition(pH), data = varechem) ## easier!</pre>
 
 <p>It also handles factor or class constraints automatically unlike the basic interface</p>
 
-</article></slide><slide class=''><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models-1" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>vare.cca &lt;- cca(varespec ~ Al + P*(K + Baresoil), data = varechem)
 vare.cca</pre>
@@ -346,7 +346,7 @@ Eigenvalues for unconstrained axes:
 0.27577 0.15411 0.13536 0.11803 0.08887 0.05511 0.04919 0.03781 
 (Showed only 8 of all 17 unconstrained eigenvalues)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Building constrained ordination models</h2></hgroup><article  id="building-constrained-ordination-models-2" class="smaller ">
 
 <p>For CCA we have little choice but to do</p>
 
@@ -361,7 +361,7 @@ Eigenvalues for unconstrained axes:
 
 <p>Vegan also provides methods for class <code>&quot;cca&quot;</code> for <code>add1()</code> and <code>drop1()</code></p>
 
-</article></slide><slide class=''><hgroup><h2>Variance inflation factors</h2></hgroup><article  id="variance-inflation-factors" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Variance inflation factors</h2></hgroup><article  id="variance-inflation-factors" class="smaller ">
 
 <p><em>Linear</em> dependencies between constraints can be investigated via the <em>variance inflation factor</em> or VIF</p>
 
@@ -376,7 +376,7 @@ Eigenvalues for unconstrained axes:
 
 <p>Computed via <code>vif.cca()</code></p>
 
-</article></slide><slide class=''><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca" class="smaller ">
 
 <p><code>step()</code> uses AIC which is a fudge for RDA/CCA. Alternatively use function <code>ordistep()</code></p>
 
@@ -394,7 +394,7 @@ mods &lt;- ordistep(lwr, scope = formula(upr), trace = 0)</pre>
 
 <p>Permutation tests are used (more on these later); the theory for an AIC for ordination is somewhat loose</p>
 
-</article></slide><slide class=''><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-1" class="smaller ">
 
 <p>The object returned by <code>step()</code> is a standard <code>&quot;cca&quot;</code> object with an extra component <code>$anova</code></p>
 
@@ -419,7 +419,7 @@ Eigenvalues for unconstrained axes:
 0.3500 0.2201 0.1851 0.1551 0.1351 0.1003 0.0773 0.0537 
 (Showed only 8 of all 20 unconstrained eigenvalues)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-2" class="smaller ">
 
 <p>The <code>$anova</code> component contains a summary of the steps involved in automatic model building</p>
 
@@ -432,9 +432,9 @@ Eigenvalues for unconstrained axes:
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-3" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Stepwise selection in CCA</h2></hgroup><article  id="stepwise-selection-in-cca-3" class="smaller ">
 
-<p>Step-wise model selection is fairly fragile; if we start from the full model we won&#39;t end up with the same final model</p>
+<p>Step-wise model selection is fairly fragile; if we start from the full model we won’t end up with the same final model</p>
 
 <pre class = 'prettyprint lang-r'>mods2 &lt;- step(upr, scope = list(lower = formula(lwr), upper = formula(upr)), trace = 0,
               test = &quot;perm&quot;)
@@ -459,7 +459,7 @@ Eigenvalues for unconstrained axes:
    CA10    CA11    CA12    CA13    CA14    CA15 
 0.01646 0.01364 0.00823 0.00655 0.00365 0.00238 </pre>
 
-</article></slide><slide class=''><hgroup><h2>Adjusted \(R^2\) for <em>linear</em> models</h2></hgroup><article  id="adjusted-r2-for-linear-models" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Adjusted \(R^2\) for <em>linear</em> models</h2></hgroup><article  id="adjusted-r2-for-linear-models" class="smaller ">
 
 <p>As with ordinary \(R^2\), that of an RDA is biased for the same reasons as for a linear regression</p>
 
@@ -482,7 +482,7 @@ Eigenvalues for unconstrained axes:
 <li><p>Compute using <code>RsquareAdj()</code></p></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Stepwise selection via adjusted \(R^2\)</h2></hgroup><article  id="stepwise-selection-via-adjusted-r2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Stepwise selection via adjusted \(R^2\)</h2></hgroup><article  id="stepwise-selection-via-adjusted-r2" class="smaller ">
 
 <p>The problems with stepwise selection in regression models are myriad. Affects RDA, CCA, etc as well</p>
 
@@ -506,15 +506,15 @@ Eigenvalues for unconstrained axes:
 
 <p>Available in <code>ordiR2step()</code></p>
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Permutation tests</h2></hgroup><article  id="permutation-tests" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Permutation tests</h2></hgroup><article  id="permutation-tests" class="smaller ">
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan" class="smaller ">
 
 <p>RDA has lots of theory behind it, CCA not as much. However, ecological/environmental data invariably violate what little theory we have</p>
 
-<p>Instead we use permutation tests to assess the <em>importance</em> of fitted models &#8212; the data are shuffled in some way and the model refitted to derive a Null distribution under some hypothesis of <em>no effect</em></p>
+<p>Instead we use permutation tests to assess the <em>importance</em> of fitted models — the data are shuffled in some way and the model refitted to derive a Null distribution under some hypothesis of <em>no effect</em></p>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan-1" class="smaller ">
 
 <p>What <em>is</em> shuffled and <em>how</em> is of <strong>paramount</strong> importance for the test to be valid</p>
 
@@ -529,7 +529,7 @@ Eigenvalues for unconstrained axes:
 <li>In <strong>vegan</strong> which is used can be set via argument <code>method</code> with <code>&quot;direct&quot;</code>, <code>&quot;full&quot;</code>, and <code>&quot;reduced&quot;</code> respectively</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan</h2></hgroup><article  id="permutation-tests-in-vegan-2" class="smaller ">
 
 <p>A test statistic is required, computed for observed model &amp; each permuted model</p>
 
@@ -539,12 +539,12 @@ Eigenvalues for unconstrained axes:
 
 <p>Evaluate whether \(F\) is unusually large relative to the null (permutation) distribution of \(F\)</p>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova" class="smaller ">
 
 <ul>
 <li>The main user function is the <code>anova()</code> method</li>
 <li>It is an interface to the lower-level function <code>permutest.cca()</code></li>
-<li>At its most simplest, the  method tests whether the ``model&#39;&#39; as a whole is significant \[F = \frac{1.4415 / 14}{0.6417 / 9} = 1.4441\]</li>
+<li>At its most simplest, the  method tests whether the ``model’’ as a whole is significant \[F = \frac{1.4415 / 14}{0.6417 / 9} = 1.4441\]</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>set.seed(42)
@@ -561,7 +561,7 @@ Residual  9   0.64171
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova-1" class="smaller ">
 
 <ul>
 <li><code>anova()</code> will continue permuting only as long as it is uncertain whether the the \(p\)-value is above or below the chosen threshold (say \(p = 0.05\))</li>
@@ -583,7 +583,7 @@ Residual  9   0.64171
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests in vegan: <code>anova()</code></h2></hgroup><article  id="permutation-tests-in-vegan-anova-2" class="smaller ">
 
 <ul>
 <li><code>anova.cca()</code> has a number of arguments</li>
@@ -606,7 +606,7 @@ NULL</pre>
 <li>More direct control can be achieved via <code>permutest.cca()</code></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Types of permutation test in vegan</h2></hgroup><article  id="types-of-permutation-test-in-vegan" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Types of permutation test in vegan</h2></hgroup><article  id="types-of-permutation-test-in-vegan" class="smaller ">
 
 <p>A number of types of test can be envisaged</p>
 
@@ -621,12 +621,12 @@ NULL</pre>
 
 <p>The other three can be selected via the argument <code>method</code></p>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests </h2><h3> testing canonical axes</h3></hgroup><article  id="permutation-tests-testing-canonical-axes" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests </h2><h3> testing canonical axes</h3></hgroup><article  id="permutation-tests-testing-canonical-axes" class="smaller ">
 
 <ul>
 <li>The constrained (canonical) axes can be individually tests by specifying <code>by = &quot;axis&quot;</code></li>
 <li>The first axis is tested in terms of variance explained compared to residual variance</li>
-<li>The second axis is tested after partialling out the first axis&#8230; and so on</li>
+<li>The second axis is tested after partialling out the first axis… and so on</li>
 </ul>
 
 <pre class = 'prettyprint lang-r'>set.seed(1)
@@ -646,7 +646,7 @@ Residual 20   1.43906
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests </h2><h3> testing terms sequentially</h3></hgroup><article  id="permutation-tests-testing-terms-sequentially" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests </h2><h3> testing terms sequentially</h3></hgroup><article  id="permutation-tests-testing-terms-sequentially" class="smaller ">
 
 <ul>
 <li>The individual terms in the model can be tested using <code>by = &quot;terms&quot;</code></li>
@@ -672,7 +672,7 @@ Residual 20   1.43906
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Permutation tests </h2><h3> testing terms marginal effects</h3></hgroup><article  id="permutation-tests-testing-terms-marginal-effects" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Permutation tests </h2><h3> testing terms marginal effects</h3></hgroup><article  id="permutation-tests-testing-terms-marginal-effects" class="smaller ">
 
 <ul>
 <li>The marginal <em>effect</em> of a model term can be assessed using <code>by = &quot;margin&quot;</code></li>
@@ -696,7 +696,7 @@ Residual 20   1.43906
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation" class="smaller ">
 
 <p>Example &amp; data taken from Leps &amp; Smilauer, Case Study 2</p>
 
@@ -709,7 +709,7 @@ library(&quot;vegan&quot;)
 spp &lt;- read.csv(&quot;data/meadow-spp.csv&quot;, header = TRUE, row.names = 1)
 env &lt;- read.csv(&quot;data/meadow-env.csv&quot;, header = TRUE, row.names = 1)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-1" class="smaller ">
 
 <p>CCA a reasonable starting point as the gradient is long here (check with <code>decorana()</code> if you want)</p>
 
@@ -728,11 +728,11 @@ Residual 54    3.7509
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-2" class="smaller ">
 
-<img src='constrained-ordination_files/figure-html/meadows-cca-full-triplot-1.png' title='fig:'/>
+<img src='constrained-ordination_files/figure-html/meadows-cca-full-triplot-1.png' title=''/>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-3" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-3" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>set.seed(67)
 lwr &lt;- cca(spp ~ 1, data = env)
@@ -758,11 +758,11 @@ Eigenvalues for unconstrained axes:
 0.27251 0.19518 0.16703 0.14993 0.14606 0.14168 0.13292 0.12154 
 (Showed only 8 of all 62 unconstrained eigenvalues)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-4" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-4" class="smaller ">
 
-<img src='constrained-ordination_files/figure-html/meadows-cca-reduced-triplot-1.png' title='fig:'/>
+<img src='constrained-ordination_files/figure-html/meadows-cca-reduced-triplot-1.png' title=''/>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-5" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-5" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>m2$anova</pre>
 
@@ -777,7 +777,7 @@ Eigenvalues for unconstrained axes:
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-6" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-6" class="smaller ">
 
 <p>Alternative is RDA with a transformation</p>
 
@@ -786,11 +786,11 @@ m3 &lt;- rda(spph ~ ., data = env)
 lwr &lt;- rda(spph ~ 1, data = env)
 m4 &lt;- ordistep(lwr, scope = formula(m3), perm.max = 199, trace = FALSE)</pre>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-7" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-7" class="smaller ">
 
-<img src='constrained-ordination_files/figure-html/meadows-rda-reduced-triplot-1.png' title='fig:'/>
+<img src='constrained-ordination_files/figure-html/meadows-rda-reduced-triplot-1.png' title=''/>
 
-</article></slide><slide class=''><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-8" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Constrained ordination worked example </h2><h3> spring meadow vegetation</h3></hgroup><article  id="constrained-ordination-worked-example-spring-meadow-vegetation-8" class="smaller ">
 
 <p>Stepwise using \(R^2_{adj}\)</p>
 
@@ -809,7 +809,7 @@ m5$anova</pre>
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations</h2></hgroup><article  id="diagnostics-for-constrained-ordinations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations</h2></hgroup><article  id="diagnostics-for-constrained-ordinations" class="smaller ">
 
 <p><strong>vegan</strong> provides a series of diagnostics to help assess the model fit</p>
 
@@ -821,7 +821,7 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 <li><code>vif.caa()</code></li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> goodness of fit</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-goodness-of-fit" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> goodness of fit</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-goodness-of-fit" class="smaller ">
 
 <p><code>goodness()</code> computes two goodness of fit statistics for species or sites</p>
 
@@ -829,10 +829,10 @@ Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&
 
 <ul>
 <li><code>statistic = &quot;explained</code> (default) gives the cumulative proportion of variance explained by each axis</li>
-<li><code>statistic = &quot;distance&quot;</code> gives the residual distance between the &quot;fitted&quot; location in constrained ordination space and the location in the full dimensional space</li>
+<li><code>statistic = &quot;distance&quot;</code> gives the residual distance between the &ldquo;fitted&rdquo; location in constrained ordination space and the location in the full dimensional space</li>
 </ul>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> goodness of fit</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-goodness-of-fit-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> goodness of fit</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-goodness-of-fit-1" class="smaller ">
 
 <pre class = 'prettyprint lang-r'>head(goodness(mods))</pre>
 
@@ -849,7 +849,7 @@ Pinusylv 0.0009244423 0.004802076 0.0060096</pre>
 <pre > Callvulg  Empenigr  Rhodtome  Vaccmyrt  Vaccviti  Pinusylv 
 0.8254657 0.1953245 0.1824153 0.2406730 0.2110550 0.0060096 </pre>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> inertia decomposition</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-inertia-decomposition" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> inertia decomposition</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-inertia-decomposition" class="smaller ">
 
 <p><code>inertcomp()</code> decomposes the variance in samples or species in partial, constrained, and unconstrained components</p>
 
@@ -871,7 +871,7 @@ Vaccmyrt 0.2406730 0.7593270
 Vaccviti 0.2110550 0.7889450
 Pinusylv 0.0060096 0.9939904</pre>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> species-environment correlations</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-species-environment-correlations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> species-environment correlations</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-species-environment-correlations" class="smaller ">
 
 <p><code>spenvcor()</code> returns the species-environment correlation</p>
 
@@ -891,7 +891,7 @@ Pinusylv 0.0060096 0.9939904</pre>
 <pre >     CCA1      CCA2      CCA3 
 0.8554808 0.8132873 0.8792797 </pre>
 
-</article></slide><slide class=''><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> interset correlations</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-interset-correlations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Diagnostics for constrained ordinations </h2><h3> interset correlations</h3></hgroup><article  id="diagnostics-for-constrained-ordinations-interset-correlations" class="smaller ">
 
 <p><code>intersetcor()</code> returns the interset correlations; the (weighted) correlation between the weighted average-based site scores and each constraint variable</p>
 
@@ -899,7 +899,7 @@ Pinusylv 0.0060096 0.9939904</pre>
 
 <ul>
 <li>correlation based</li>
-<li>focuses on a single constraint&#8211;axis combination at a time</li>
+<li>focuses on a single constraint–axis combination at a time</li>
 </ul>
 
 <p>Vector fitting (<code>envfit()</code>) or biplot scores (<code>scores(model, display = &quot;bp&quot;)</code>) are better alternatives</p>
@@ -911,45 +911,45 @@ Al  0.7356151 -0.1302334 0.4259623
 P  -0.3589749 -0.6110772 0.4478933
 K  -0.3768462 -0.1339192 0.7760441</pre>
 
-</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Restricted permutation tests</h2></hgroup><article  id="restricted-permutation-tests" class="smaller ">
+</article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Restricted permutation tests</h2></hgroup><article  id="restricted-permutation-tests" class="smaller ">
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutation tests</h2></hgroup><article  id="restricted-permutation-tests-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutation tests</h2></hgroup><article  id="restricted-permutation-tests-1" class="smaller ">
 
 <p>What <em>is</em> shuffled and <em>how</em> is of <strong>paramount</strong> importance for the test to be valid</p>
 
 <p>Complete randomisation (default in <strong>vegan</strong>) assumes a null hypothesis where all observations are <em>independent</em></p>
 
-<p>Ecological / environmental data often aren&#39;t independent</p>
+<p>Ecological / environmental data often aren’t independent</p>
 
 <ul>
 <li>Temporal or spatial correlation</li>
 <li>Clustering, repeated measures</li>
 <li>Nested sampling designs (Split-plots designs)</li>
 <li>Blocks</li>
-<li>&#8230;</li>
+<li>…</li>
 </ul>
 
 <p>Permutation <em>must</em> give null distribution of the test statistic whilst preserving the <em>dependence</em> between observations</p>
 
 <p>Trick is to shuffle the data whilst preserving that dependence</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations</h2></hgroup><article  id="restricted-permutations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations</h2></hgroup><article  id="restricted-permutations" class="smaller ">
 
-<p>Canoco has had restricted permutations for a <em>long</em> time. <strong>vegan</strong> has only recently caught up &amp; we&#39;re not there yet</p>
+<p>Canoco has had restricted permutations for a <em>long</em> time. <strong>vegan</strong> has only recently caught up &amp; we’re not there yet</p>
 
 <p><strong>vegan</strong> still only knows how to completely randomise data or completely randomise within blocks (called <code>strata</code> in <strong>vegan</strong>)</p>
 
 <p>The newish package <strong>permute</strong> grew out of initial code in the <strong>vegan</strong> repository to generate the sorts of restricted permutations available in Canoco</p>
 
-<p>We still haven&#39;t fully integrated <strong>permute</strong> into <strong>vegan</strong>&#8230;</p>
+<p>We still haven’t fully integrated <strong>permute</strong> into <strong>vegan</strong>…</p>
 
-<p>&#8230;but you can pass <strong>vegan</strong> functions a matrix of permutations to use instead of having it generate its own</p>
+<p>…but you can pass <strong>vegan</strong> functions a matrix of permutations to use instead of having it generate its own</p>
 
 <p><strong>vegan</strong> depends on <strong>permute</strong> so you should have it already installed &amp; loaded when using <strong>vegan</strong></p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong></h2></hgroup><article  id="restricted-permutations-with-permute" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong></h2></hgroup><article  id="restricted-permutations-with-permute" class="smaller ">
 
-<p><strong>permute</strong> follows Canoco closely &#8212; at the chiding of Cajo ter Braak when it didn&#39;t do what he wanted !</p>
+<p><strong>permute</strong> follows Canoco closely — at the chiding of Cajo ter Braak when it didn’t do what he wanted !</p>
 
 <p>Samples can be thought of as belonging to three levels of a hierarchy</p>
 
@@ -961,7 +961,7 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>Blocks define groups of plots, each of which can contain groups of samples</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong></h2></hgroup><article  id="restricted-permutations-with-permute-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong></h2></hgroup><article  id="restricted-permutations-with-permute-1" class="smaller ">
 
 <p>Blocks are <em>never</em> permuted; if defined, only plots or samples <em>within</em> the blocks get shuffled &amp; samples never swapped between blocks</p>
 
@@ -977,7 +977,7 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>Multiple plots per block, multiple samples per plot; plots could be arranged in a spatial grid and samples within each of the plots form a time series</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> blocks</h3></hgroup><article  id="restricted-permutations-with-permute-blocks" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> blocks</h3></hgroup><article  id="restricted-permutations-with-permute-blocks" class="smaller ">
 
 <p>Blocks are a random factor that does not interact with factors that vary within blocks</p>
 
@@ -985,17 +985,17 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>Using blocks you can achieve what the <code>strata</code> argument does now in <strong>vegan</strong>; needs to be a factor variable</p>
 
-<p>The variation <em>between</em> blocks should be excluded from the test; <strong>permute</strong> doesn&#39;t do this for you!</p>
+<p>The variation <em>between</em> blocks should be excluded from the test; <strong>permute</strong> doesn’t do this for you!</p>
 
 <p>Use <code>+ Condition(blocks)</code> in the model formula where <code>blocks</code> is a factor containing the block membership for each observation</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series &amp; linear transects</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-linear-transects" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series &amp; linear transects</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-linear-transects" class="smaller ">
 
 <p>Can link <em>randomly</em> starting point of one series to any time point of another series if series are stationary under null hypothesis that the series are unrelated</p>
 
-<p>Achieve this via cyclic shift permutations &#8212; wrap series into a circle by joining start and end points</p>
+<p>Achieve this via cyclic shift permutations — wrap series into a circle by joining start and end points</p>
 
-<p>Works OK if there are no trends or cyclic pattern &#8212; autocorrelation structure only broken at the end points <em>if</em> series are stationary</p>
+<p>Works OK if there are no trends or cyclic pattern — autocorrelation structure only broken at the end points <em>if</em> series are stationary</p>
 
 <p>Can detrend to make series stationary but not if you want to test significance of a trend</p>
 
@@ -1003,7 +1003,7 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <pre > [1]  9 10  1  2  3  4  5  6  7  8</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> spatial grids</h3></hgroup><article  id="restricted-permutations-with-permute-spatial-grids" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> spatial grids</h3></hgroup><article  id="restricted-permutations-with-permute-spatial-grids" class="smaller ">
 
 <div class="columns-2">
 <p>The trick of cyclic shifts can be extended to two dimensions for a regular spatial grid arrangement of points</p>
@@ -1017,7 +1017,7 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 [2,]    4    7    1
 [3,]    5    8    2</pre></div>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> whole-plots &amp; split-plots I</h3></hgroup><article  id="restricted-permutations-with-permute-whole-plots-split-plots-i" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> whole-plots &amp; split-plots I</h3></hgroup><article  id="restricted-permutations-with-permute-whole-plots-split-plots-i" class="smaller ">
 
 <p>Split-plot designs are hierarchical with two levels of units</p>
 
@@ -1034,13 +1034,13 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>Test effect of constraints that vary <em>within</em> whole-plots by permuting the split-plots within whole-plots without permuting the whole-plots</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> whole-plots &amp; split-plots II</h3></hgroup><article  id="restricted-permutations-with-permute-whole-plots-split-plots-ii" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> whole-plots &amp; split-plots II</h3></hgroup><article  id="restricted-permutations-with-permute-whole-plots-split-plots-ii" class="smaller ">
 
 <p>Whole-plots or split-plots can be time series, linear transects or rectangular grids in which case the appropriate restricted permutation is used</p>
 
 <p>If the split-plots are parallel time series &amp; <code>time</code> is an autocorrelated error component affecting all series then the same cyclic shift can be applied to each time series (within each whole-plot) (<code>constant = TRUE</code>)</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> mirroring</h3></hgroup><article  id="restricted-permutations-with-permute-mirroring" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> mirroring</h3></hgroup><article  id="restricted-permutations-with-permute-mirroring" class="smaller ">
 
 <p>(Without wanting to get <em>too</em> technical) Mirroring in restricted permutations allows for isotropy in dependences by reflecting the ordering of samples in time or spatial dimensions</p>
 
@@ -1052,13 +1052,13 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>Using <code>mirror = TRUE</code> then can double (time series, linear transects) or quadruple (spatial grids) the size of the set of permutations</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> the set of permutations</h3></hgroup><article  id="restricted-permutations-with-permute-the-set-of-permutations" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> the set of permutations</h3></hgroup><article  id="restricted-permutations-with-permute-the-set-of-permutations" class="smaller ">
 
 <p>Using restricted permutations can severely reduce the size of the set of allowed permutations</p>
 
 <p>As the minimum <em>p</em> value obtaininable is \(1 / np\) where \(np\) is number of allowed permutations (including the observed) this can impact the ability to detect signal/pattern</p>
 
-<p>If we don&#39;t want mirroring</p>
+<p>If we don’t want mirroring</p>
 
 <ul>
 <li>in a time series of 20 samples the minimum <em>p</em> is 1/20 (0.05)</li>
@@ -1068,7 +1068,7 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 
 <p>When the set of permutations is small it is better to switch to an exact test &amp; evaluate all permutations in the set rather than randomly sample from the set</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes" class="smaller ">
 
 <p>In <strong>permute</strong>, we set up a permutation scheme with <code>how()</code></p>
 
@@ -1079,22 +1079,22 @@ K  -0.3768462 -0.1339192 0.7760441</pre>
 <li><code>shuffleSet()</code>, which returns a set of <code>n</code> draws from the scheme</li>
 </ul>
 
-<p><code>allPerms()</code> can generated the entire set of permutations &#8212; <strong>note</strong> this was designed for small sets of permutations &amp; is slow if you request it for a scheme with many thousands of permutations!</p>
+<p><code>allPerms()</code> can generated the entire set of permutations — <strong>note</strong> this was designed for small sets of permutations &amp; is slow if you request it for a scheme with many thousands of permutations!</p>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-1" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-1" class="smaller ">
 
 <p><code>how()</code> has three main arguments</p>
 
 <ol>
-<li><code>within</code> &#8212; takes input from helper <code>Within()</code></li>
-<li><code>plots</code> &#8212; takes input from helper <code>Plots()</code></li>
-<li><code>blocks</code> &#8212; takes a factor variable as input</li>
+<li><code>within</code> — takes input from helper <code>Within()</code></li>
+<li><code>plots</code> — takes input from helper <code>Plots()</code></li>
+<li><code>blocks</code> — takes a factor variable as input</li>
 </ol>
 
 <pre class = 'prettyprint lang-r'>plt &lt;- gl(3, 10)
 h &lt;- how(within = Within(type = &quot;series&quot;), plots = Plots(strata = plt))</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-2" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-2" class="smaller ">
 
 <p>Helper functions make it easy to change one or a few aspects of permutation scheme, rest left at defaults</p>
 
@@ -1110,7 +1110,7 @@ NULL</pre>
     mirror = FALSE, ncol = NULL, nrow = NULL) 
 NULL</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-3" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> designing permutation schemes</h3></hgroup><article  id="restricted-permutations-with-permute-designing-permutation-schemes-3" class="smaller ">
 
 <p><code>how()</code> has additional arguments, many of which control the heuristics that kick in to stop you shooting yourself in the foot and demanding 9999 permutations when there are only 10</p>
 
@@ -1126,7 +1126,7 @@ NULL</pre>
     all.perms = NULL, make = TRUE, observed = FALSE) 
 NULL</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series example I</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-example-i" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series example I</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-example-i" class="smaller ">
 
 <p>Time series within 3 plots, 10 observation each</p>
 
@@ -1141,7 +1141,7 @@ do.call(&quot;rbind&quot;, split(p, plt)) ## look at perms in context</pre>
 2   12   13   14   15   16   17   18   19   20    11
 3   24   25   26   27   28   29   30   21   22    23</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series example II</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-example-ii" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> time series example II</h3></hgroup><article  id="restricted-permutations-with-permute-time-series-example-ii" class="smaller ">
 
 <p>Time series within 3 plots, 10 observation each, same permutation within each</p>
 
@@ -1156,7 +1156,7 @@ do.call(&quot;rbind&quot;, split(p, plt)) ## look at perms in context</pre>
 2   17   18   19   20   11   12   13   14   15    16
 3   27   28   29   30   21   22   23   24   25    26</pre>
 
-</article></slide><slide class=''><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> worked example with <strong>vegan</strong></h3></hgroup><article  id="restricted-permutations-with-permute-worked-example-with-vegan" class="smaller ">
+</article></slide><slide class=""><hgroup><h2>Restricted permutations with <strong>permute</strong> </h2><h3> worked example with <strong>vegan</strong></h3></hgroup><article  id="restricted-permutations-with-permute-worked-example-with-vegan" class="smaller ">
 
 <p>Here by dragons</p>
 
@@ -1249,7 +1249,7 @@ Residual 90   556.30
 ---
 Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
 
-</article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references" class="smaller unnumbered">
+</article></slide><slide class=""><hgroup><h2>References</h2></hgroup><article  id="references" class="smaller unnumbered">
 
 <div id="refs" class="references">
 <div id="ref-Blanchet2008">

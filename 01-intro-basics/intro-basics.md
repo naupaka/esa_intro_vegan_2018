@@ -1,18 +1,20 @@
-# Community data analysis using the vegan package in R
-Naupaka Zimmerman and Gavin Simpson  
-August 6, 2017 • ESA 2017  
+---
+title: "Community data analysis using the vegan package in R"
+author: "Naupaka Zimmerman and Gavin Simpson"
+date: "August 5, 2018 • ESA 2018"
+output:
+  ioslides_presentation:
+    fig_height: 6
+    fig_width: 7
+    highlight: tango
+    keep_md: yes
+    widescreen: yes
+---
 
 
 
 ## Workshop logistics
 
-* Etherpad 
-    * https://public.etherpad-mozilla.org/p/ESA2017-intro-vegan
-
-## Workshop logistics
-
-* Etherpad 
-    * https://public.etherpad-mozilla.org/p/ESA2017-intro-vegan
 * Red and Green Stickies 
   
 ![](img/Green_post_it.png)&nbsp;&nbsp;&nbsp;&nbsp;![](img/Red_post_it.png)
@@ -27,7 +29,7 @@ library("vegan")
 ```
 
 ### Data downloaded from github?  
-https://github.com/naupaka/esa_intro_vegan_2016
+https://github.com/naupaka/esa_intro_vegan_2018
 
 ## Introduction to **vegan** | a potted history
 

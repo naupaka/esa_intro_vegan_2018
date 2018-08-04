@@ -1,6 +1,20 @@
-# Constrained Ordination & Permutation Tests
-Naupaka Zimmerman and Gavin Simpson  
-August 6, 2017 • ESA 2017  
+---
+title: "Constrained Ordination & Permutation Tests"
+author: "Naupaka Zimmerman and Gavin Simpson"
+date: "August 5, 2018 • ESA 2018"
+bibliography: constrained-ordination.bib
+
+output:
+  ioslides_presentation:
+    widescreen: true
+    smaller: true
+    fig_width: 6
+    fig_height: 5
+    fig_caption: true
+    keep_md: true
+    highlight: tango
+    self_contained: false
+---
 
 
 

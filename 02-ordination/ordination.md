@@ -1,6 +1,13 @@
-# Ordination with vegan
-Naupaka Zimmerman and Gavin Simpson  
-August 6, 2017 • ESA 2017  
+---
+title: "Ordination with vegan"
+author: "Naupaka Zimmerman and Gavin Simpson"
+date: "August 5, 2018 • ESA 2018"
+output:
+  ioslides_presentation:
+    highlight: tango
+    keep_md: yes
+    widescreen: yes
+---
 
 
 
